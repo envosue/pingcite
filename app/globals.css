@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #0b1220;
+  --color-bg: #0b0d12;
   --color-surface: #1e293b;
   --color-surface-2: #334155;
   --color-border: #334155;
   --color-teal: #14b8a6;
-  --color-teal-light: #2dd4bf;
-  --color-ink: #0b1220;
+  --color-teal-light: #5eead4;
+  --color-ink: #0b0d12;
   --color-text: #f1f5f9;
   --color-text-2: #cbd5e1;
   --color-muted: #94a3b8;
@@ -130,8 +130,8 @@ body {
     circle at 82% 18%,
     transparent 0px,
     transparent 40px,
-    rgba(45, 212, 191, 0.15) 41px,
-    rgba(45, 212, 191, 0.15) 43px
+    rgba(94, 234, 212, 0.15) 41px,
+    rgba(94, 234, 212, 0.15) 43px
   );
 }
 .ring-pattern-soft {
@@ -139,7 +139,7 @@ body {
     circle at 85% 15%,
     transparent 0px,
     transparent 20px,
-    rgba(45, 212, 191, 0.08) 21px,
-    rgba(45, 212, 191, 0.08) 22px
+    rgba(94, 234, 212, 0.08) 21px,
+    rgba(94, 234, 212, 0.08) 22px
   );
 }

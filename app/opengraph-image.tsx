@@ -16,20 +16,20 @@ export default function OpengraphImage() {
           alignItems: "center",
           justifyContent: "center",
           gap: 32,
-          backgroundColor: "#0b1220",
+          backgroundColor: "#0b0d12",
           backgroundImage:
-            "radial-gradient(circle at 50% 35%, rgba(45,212,191,0.25), rgba(11,18,32,0) 60%)",
+            "radial-gradient(circle at 50% 35%, rgba(94,234,212,0.25), rgba(11,13,18,0) 60%)",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
           <svg width={84} height={84} viewBox="0 0 34 34">
-            <circle cx="17" cy="17" r="3.4" fill="#2DD4BF" />
+            <circle cx="17" cy="17" r="3.4" fill="#5EEAD4" />
             <circle
               cx="17"
               cy="17"
               r="10"
               fill="none"
-              stroke="#2DD4BF"
+              stroke="#5EEAD4"
               strokeWidth="2"
               opacity="0.65"
             />
@@ -38,7 +38,7 @@ export default function OpengraphImage() {
               cy="17"
               r="16"
               fill="none"
-              stroke="#2DD4BF"
+              stroke="#5EEAD4"
               strokeWidth="2"
               opacity="0.3"
             />
