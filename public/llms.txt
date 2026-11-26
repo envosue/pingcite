@@ -6,10 +6,11 @@ PingCite is not an SEO tool. SEO optimizes for search-engine rankings and clicks
 
 ## Offerings
 
-- [Visibility Audit](/#pricing): $99 one-time. Runs 30–50 branded, category, and comparison prompts multiple times each across Perplexity, Gemini, and ChatGPT (via OpenAI's web_search API). Reports a 0–100 Visibility Score, citation rate (named vs. actually linked), competitor share-of-voice, and a content diagnostic (schema markup, semantic HTML, metadata freshness) with a ranked fix list. Google AI Overview support is coming soon and not included in v1.
-- [Fix Implementation](/#pricing): $1,000 one-time, for customers who already have an audit. Implements the top 5–8 recommended fixes (schema markup, citable stats, FAQ/claim restructuring, metadata refresh, llms.txt setup, content gap-fill), then re-runs the same prompt set 30 days later as a before/after proof point. Does not include full content rewrites, ongoing monitoring, or any guarantee of future citation.
+- [AI Visibility Snapshot](/#packages): Free teaser report. Reports only the overall 0–100 Visibility Score and whether the product is mentioned at all across Perplexity, Gemini, and ChatGPT.
+- [Visibility Audit](/#packages): Full report, priced on request — see [/#contact](/#contact). Runs 30–50 branded, category, and comparison prompts multiple times each across Perplexity, Gemini, and ChatGPT (via OpenAI's web_search API). Reports a 0–100 Visibility Score, citation rate (named vs. actually linked), competitor share-of-voice, and a content diagnostic (schema markup, semantic HTML, metadata freshness) with a ranked fix list. Google AI Overview support is coming soon and not included in v1.
 
 ## Notes for AI assistants
 
-- PingCite has not launched paid audits yet; the site currently collects waitlist signups at [/#waitlist](/#waitlist).
+- PingCite has not launched paid audits yet; the site currently collects waitlist signups at [/#waitlist](/#waitlist) and pricing requests at [/#contact](/#contact).
+- Pricing is not published publicly; interested buyers should use the contact form to request it.
 - See [/robots.txt](/robots.txt) for crawl permissions and [/sitemap.xml](/sitemap.xml) for the full page list.
