@@ -1,5 +1,6 @@
 import { Lockup, RingMark, Wordmark } from "./components/Logo";
 import { WaitlistForm } from "./components/WaitlistForm";
+import { siteName, siteUrl } from "./site-config";
 
 const steps = [
   {
@@ -67,9 +68,69 @@ function CheckItem({ children }: { children: React.ReactNode }) {
   );
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: siteName,
+      url: siteUrl,
+      description:
+        "PingCite runs an AI-visibility (AEO) audit that checks whether ChatGPT, Perplexity, and Gemini cite a SaaS product in their answers, and what to fix if they don't.",
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: siteName,
+      publisher: { "@id": `${siteUrl}/#organization` },
+    },
+    {
+      "@type": "Service",
+      name: "Visibility Audit",
+      provider: { "@id": `${siteUrl}/#organization` },
+      description:
+        "30-50 branded, category and comparison prompts run across Perplexity, Gemini and ChatGPT, scored into a 0-100 Visibility Score, citation rate, competitor share-of-voice and a ranked fix list.",
+      offers: {
+        "@type": "Offer",
+        price: "99",
+        priceCurrency: "USD",
+      },
+    },
+    {
+      "@type": "Service",
+      name: "Fix Implementation",
+      provider: { "@id": `${siteUrl}/#organization` },
+      description:
+        "Implementation of the top 5-8 fixes from a Visibility Audit (schema markup, citable stats, FAQ/claim restructuring, metadata refresh, llms.txt setup, content gap-fill), plus a 30-day re-audit on the same prompt set.",
+      offers: {
+        "@type": "Offer",
+        price: "1000",
+        priceCurrency: "USD",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      })),
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="sticky top-0 z-50 border-b border-border bg-bg/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
           <Lockup iconSize={24} textSize={16} />

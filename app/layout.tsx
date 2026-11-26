@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import { siteUrl } from "./site-config";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -19,6 +20,7 @@ const description =
   "Know if ChatGPT, Perplexity and Gemini recommend your product — and exactly what to fix if they don't. A scored AI-visibility audit for indie SaaS founders.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title,
   description,
   openGraph: {
