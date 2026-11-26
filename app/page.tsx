@@ -87,6 +87,19 @@ const jsonLd = {
       publisher: { "@id": `${siteUrl}/#organization` },
     },
     {
+      "@type": "SoftwareApplication",
+      name: siteName,
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      url: siteUrl,
+      description:
+        "PingCite runs an AI-visibility (AEO) audit that checks whether ChatGPT, Perplexity, and Gemini cite a SaaS product in their answers, and what to fix if they don't.",
+      offers: [
+        { "@type": "Offer", name: "Visibility Audit", price: "99", priceCurrency: "USD" },
+        { "@type": "Offer", name: "Fix Implementation", price: "1000", priceCurrency: "USD" },
+      ],
+    },
+    {
       "@type": "Service",
       name: "Visibility Audit",
       provider: { "@id": `${siteUrl}/#organization` },
