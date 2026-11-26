@@ -124,22 +124,14 @@ body {
   }
 }
 
-/* Radar-sweep-ring pattern motif — dark surfaces only, off-center, single hue */
+/* Signal Ping background patterns (brand/BRAND_GUIDELINES.md §4) — dark surfaces only */
 .ring-pattern-hero {
-  background-image: repeating-radial-gradient(
-    circle at 82% 18%,
-    transparent 0px,
-    transparent 40px,
-    rgba(94, 234, 212, 0.15) 41px,
-    rgba(94, 234, 212, 0.15) 43px
-  );
+  background-image: url("/brand/pingcite-pattern-rings-dark.png");
+  background-repeat: repeat;
+  background-size: 260px 260px;
 }
 .ring-pattern-soft {
-  background-image: repeating-radial-gradient(
-    circle at 85% 15%,
-    transparent 0px,
-    transparent 20px,
-    rgba(94, 234, 212, 0.08) 21px,
-    rgba(94, 234, 212, 0.08) 22px
-  );
+  background-image: url("/brand/pingcite-pattern-sweep-dark.png");
+  background-repeat: repeat;
+  background-size: 220px 220px;
 }

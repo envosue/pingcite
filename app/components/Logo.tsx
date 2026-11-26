@@ -1,26 +1,13 @@
 export function RingMark({ size = 32 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 34 34" aria-hidden="true">
-      <circle cx="17" cy="17" r="3.4" fill="#5EEAD4" />
-      <circle
-        cx="17"
-        cy="17"
-        r="10"
-        fill="none"
-        stroke="#5EEAD4"
-        strokeWidth="2"
-        opacity="0.65"
-      />
-      <circle
-        cx="17"
-        cy="17"
-        r="16"
-        fill="none"
-        stroke="#5EEAD4"
-        strokeWidth="2"
-        opacity="0.3"
-      />
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/brand/pingcite-avatar-signal.png"
+      alt="PingCite"
+      width={size}
+      height={size}
+      style={{ width: size, height: size }}
+    />
   );
 }
 
