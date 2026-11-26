@@ -59,7 +59,7 @@ const faqs = [
 
 function CheckItem({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex gap-2 text-small text-text-2">
+    <li className="flex gap-2 text-body text-text-2">
       <span className="mt-1 text-teal-light" aria-hidden="true">
         &#10003;
       </span>
@@ -157,7 +157,7 @@ export default function Home() {
         {/* ============ HERO ============ */}
         <section
           id="hero"
-          className="ring-pattern-hero relative overflow-hidden border-b border-border px-4 py-24 sm:py-32"
+          className="pattern-rings-dark relative overflow-hidden border-b border-border px-4 py-24 sm:py-32"
         >
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
             <RingMark size={40} />
@@ -191,7 +191,7 @@ export default function Home() {
         </section>
 
         {/* ============ HOW IT WORKS ============ */}
-        <section id="how-it-works" className="border-b border-border px-4 py-24">
+        <section id="how-it-works" className="pattern-dotfield-dark border-b border-border px-4 py-24">
           <div className="mx-auto max-w-6xl">
             <p className="text-overline text-teal-light">How it works</p>
             <h2 className="text-h2 font-display mt-2 mb-16 max-w-2xl">
@@ -207,7 +207,7 @@ export default function Home() {
                   <h3 className="text-body font-display font-semibold text-text">
                     {step.title}
                   </h3>
-                  <p className="text-small text-text-2">{step.body}</p>
+                  <p className="text-body text-text-2">{step.body}</p>
                 </div>
               ))}
             </div>
@@ -290,7 +290,7 @@ export default function Home() {
                       +
                     </span>
                   </summary>
-                  <p className="text-small mt-4 text-text-2">{item.a}</p>
+                  <p className="text-body mt-4 text-text-2">{item.a}</p>
                 </details>
               ))}
             </div>
@@ -300,7 +300,7 @@ export default function Home() {
         {/* ============ WAITLIST CTA ============ */}
         <section
           id="waitlist"
-          className="ring-pattern-soft border-b border-border bg-surface px-4 py-24"
+          className="pattern-sweep-dark border-b border-border bg-surface px-4 py-24"
         >
           <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">
             <p className="text-overline text-teal-light">Get notified</p>
