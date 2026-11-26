@@ -5,22 +5,22 @@ import { siteName, siteUrl } from "./site-config";
 
 const steps = [
   {
-    n: "01",
+    n: "a",
     title: "We query your category",
     body: "We run 30–50 real customer-style prompts — branded, category and comparison queries — through the AI assistants your buyers actually use.",
   },
   {
-    n: "02",
+    n: "b",
     title: "We score your visibility",
     body: "Every answer is checked for whether you're named, actually linked, and how you stack up against the competitors who got cited instead.",
   },
   {
-    n: "03",
+    n: "c",
     title: "We show you what's hurting citations",
     body: "A content diagnostic flags the gaps — missing schema, thin semantic structure, stale metadata — that keep AI engines from citing your pages.",
   },
   {
-    n: "04",
+    n: "d",
     title: "We fix it, if you want",
     body: "Optional: we implement the top fixes ourselves, then re-run the same prompts 30 days later to prove the move.",
   },
@@ -161,7 +161,7 @@ export default function Home() {
         >
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
             <RingMark size={40} />
-            <p className="text-overline text-teal-light">AI visibility audit</p>
+            <p className="text-lead-serif">AI visibility audit</p>
             <h1 className="text-display font-display text-text">
               Know if AI recommends you
             </h1>
@@ -191,19 +191,19 @@ export default function Home() {
         </section>
 
         {/* ============ HOW IT WORKS ============ */}
-        <section id="how-it-works" className="pattern-dotfield-dark border-b border-border px-4 py-24">
+        <section id="how-it-works" className="theme-light bg-bg border-b border-border px-4 py-24">
           <div className="mx-auto max-w-6xl">
-            <p className="text-overline text-teal-light">How it works</p>
-            <h2 className="text-h2 font-display mt-2 mb-16 max-w-2xl">
+            <p className="text-lead-serif">How it works</p>
+            <h2 className="text-h2 font-display mt-2 mb-16 max-w-2xl text-text">
               From blind spot to fix list
             </h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 border-t border-border sm:grid-cols-2 lg:grid-cols-4">
               {steps.map((step) => (
                 <div
                   key={step.n}
-                  className="flex flex-col gap-4 rounded-2xl border border-border bg-surface p-8"
+                  className="flex flex-col gap-4 border-b border-border px-0 py-8 sm:border-r sm:px-8 sm:py-10 lg:border-b-0"
                 >
-                  <span className="text-h4 font-display text-teal-light">{step.n}</span>
+                  <span className="font-serif text-h1 italic text-teal">({step.n})</span>
                   <h3 className="text-body font-display font-semibold text-text">
                     {step.title}
                   </h3>
@@ -217,7 +217,7 @@ export default function Home() {
         {/* ============ PACKAGES ============ */}
         <section id="packages" className="border-b border-border px-4 py-24">
           <div className="mx-auto max-w-5xl">
-            <p className="text-overline text-teal-light">Packages</p>
+            <p className="text-lead-serif">Packages</p>
             <h2 className="text-h2 font-display mt-2 mb-4 max-w-2xl">
               Two ways to work with us
             </h2>
@@ -261,10 +261,10 @@ export default function Home() {
         </section>
 
         {/* ============ CONTACT ============ */}
-        <section id="contact" className="border-b border-border bg-surface px-4 py-24">
+        <section id="contact" className="theme-light bg-bg border-b border-border px-4 py-24">
           <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">
-            <p className="text-overline text-teal-light">Pricing &amp; sales</p>
-            <h2 className="text-h2 font-display">Contact us for pricing</h2>
+            <p className="text-lead-serif">Pricing &amp; sales</p>
+            <h2 className="text-h2 font-display text-text">Contact us for pricing</h2>
             <p className="text-body-lg text-text-2">
               Tell us about your product and we&apos;ll follow up with pricing for the full
               Visibility Audit and next steps.
@@ -276,7 +276,7 @@ export default function Home() {
         {/* ============ FAQ ============ */}
         <section id="faq" className="border-b border-border px-4 py-24">
           <div className="mx-auto max-w-3xl">
-            <p className="text-overline text-teal-light">FAQ</p>
+            <p className="text-lead-serif">FAQ</p>
             <h2 className="text-h2 font-display mt-2 mb-16">Questions, answered straight</h2>
             <div className="flex flex-col gap-4">
               {faqs.map((item) => (
@@ -303,7 +303,7 @@ export default function Home() {
           className="pattern-sweep-dark border-b border-border bg-surface px-4 py-24"
         >
           <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">
-            <p className="text-overline text-teal-light">Get notified</p>
+            <p className="text-lead-serif">Get notified</p>
             <h2 className="text-h2 font-display">Be first when audits open</h2>
             <p className="text-body-lg text-text-2">
               We&apos;re finishing the pipeline. Leave your email and we&apos;ll tell you the

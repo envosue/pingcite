@@ -16,6 +16,9 @@
   --color-success: #4ade80;
   --color-warning: #fbbf24;
   --color-error: #f87171;
+  /* accent-ink: bright teal-light reads at high contrast on dark; .theme-light
+     swaps it to a deep teal so lead-in text stays >=4.5:1 on light sections too */
+  --color-accent-ink: var(--color-teal-light);
 }
 
 @theme inline {
@@ -35,6 +38,7 @@
   --color-error: var(--color-error);
   --font-display: var(--font-space-grotesk);
   --font-body: var(--font-ibm-plex-sans);
+  --font-serif: var(--font-instrument-serif);
 }
 
 html {
@@ -55,6 +59,10 @@ body {
 
 .font-display {
   font-family: var(--font-display);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
 }
 
 /* Type scale — Major Third (1.25 ratio), 16px base */
@@ -111,6 +119,17 @@ body {
   text-transform: uppercase;
 }
 
+/* Short italic lead-ins above a headline — editorial accent, scoped addition per
+   BRAND_GUIDELINES.md §6 (pending sign-off), not a typeface swap. */
+.text-lead-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--color-accent-ink);
+}
+
 @media (max-width: 640px) {
   .text-display {
     font-size: 39px;
@@ -126,6 +145,44 @@ body {
     font-size: 25px;
     line-height: 32px;
   }
+}
+
+/* Desktop-up tier — current scale is the mobile/tablet floor (BRAND_GUIDELINES.md §3),
+   not a desktop ceiling. §6 (pending sign-off): much larger display type on wide
+   viewports only. Values stay on the major-third scale (12.8/16/20/25/31.25/
+   39.06/48.83/61.04/76.29/95.37/119.21/149.01) and line-heights on the 8pt grid,
+   per the house type rules — 119px is the nearest on-scale step inside Rex's
+   requested 96-140px display range, not 140 itself. */
+@media (min-width: 1024px) {
+  .text-display {
+    font-size: 119px;
+    line-height: 120px;
+    letter-spacing: -0.02em;
+  }
+  .text-h2 {
+    font-size: 61px;
+    line-height: 64px;
+  }
+  .text-lead-serif {
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+
+/* Light full-bleed section — alternates with the dark sections instead of
+   dark-everywhere (BRAND_GUIDELINES.md §6, pending sign-off). Locked teal/ink
+   accents are unchanged; only bg/surface/text/border swap to light values. */
+.theme-light {
+  --color-bg: #fafaf9;
+  --color-bg-end: #f4f4f2;
+  --color-surface: #ffffff;
+  --color-surface-2: #f2f2f0;
+  --color-border: #e4e4e1;
+  --color-text: #0b0d12;
+  --color-text-2: #44464b;
+  --color-muted: #6b6e73;
+  /* deep teal, not teal-light: keeps accent text >=4.5:1 against the light bg */
+  --color-accent-ink: #0f766e;
 }
 
 /* Signal Ping background patterns — dark-surface motifs, single teal hue, per BRAND_GUIDELINES.md */
